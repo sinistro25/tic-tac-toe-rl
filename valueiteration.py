@@ -147,13 +147,16 @@ class ReinforcementAgent(Agent):
     
     
 if __name__ == "__main__":
+    print("Calculating and saving the X player agent policy...")
     game = TicTacToe()
     agent = ReinforcementAgent(game,player=Player.X)
     file = open("policy_X.pkl","wb")
     pickle.dump(agent.policy, file)
     file.close() 
     
+    print("Calculating and saving the O player agent policy...")
     agent = ReinforcementAgent(game,player=Player.O)
     file = open("policy_O.pkl","wb")
     pickle.dump(agent.policy, file)
     file.close()   
+    print("Finished!")
