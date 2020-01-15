@@ -71,7 +71,7 @@ def reward(state):
         return RVICTORY
     return RLOSS
 
-class ReinforcementAgent(Agent):
+class ReinforcementAgent:
     def __init__(self,game,player=Player.X):
         self.player = player
         # Must recieve a board in the player X state
